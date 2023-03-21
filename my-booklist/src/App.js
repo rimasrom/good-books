@@ -38,7 +38,7 @@ const bookDatabase = {
 
 const App = () => {
 
-  const [selectedgenre, setGenre] = useState("")
+  const [selectedGenre, setGenre] = useState("business")
   function onclickHandler(genre){
     setGenre(genre)
   }
@@ -53,6 +53,18 @@ const App = () => {
         ))}
       </div>
       <hr />
+      <div className="output">
+        <ul>
+          {
+           bookDatabase[selectedGenre].map((book)=>(
+            <li>
+              <div className='list'>{book.name}</div>
+              <div className='list'>{book.rating}</div>
+            </li>
+           )) 
+          }
+        </ul>
+      </div>
     </div>
   )
 }
