@@ -10,6 +10,7 @@ const App = () => {
         <button>Fiction</button>
         <button>Business</button>
       </div>
+      <hr />
     </div>
   )
 }
