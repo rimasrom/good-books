@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
 const bookDatabase = {
@@ -37,14 +37,20 @@ const bookDatabase = {
 }
 
 const App = () => {
+
+  const [selectedgenre, setGenre] = useState("")
+  function onclickHandler(genre){
+    setGenre(genre)
+  }
+  
   return (
     <div className='container-main'>
       <h1>📚 Good Books</h1>
       <p>Checkout my favorite books. Select a genre to get started</p>
-      <div className="button">
-        <button className='btn'>JavaScript</button>
-        <button className='btn'>Fiction</button>
-        <button className='btn'>Business</button>
+      <div>
+        {Object.keys(bookDatabase).map((genre)=>(
+          <button onClick={()=>onclickHandler(genre)}>{genre}</button>
+        ))}
       </div>
       <hr />
     </div>

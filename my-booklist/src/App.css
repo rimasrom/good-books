@@ -8,8 +8,9 @@ h1,p{
     margin: 2.5rem 0rem;
 }
 
-.btn{
+button{
     margin-right: 1rem;
+    margin-bottom: 1rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
